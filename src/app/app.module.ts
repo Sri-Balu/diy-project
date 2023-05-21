@@ -8,6 +8,7 @@ import { OTPpageComponent } from './login/otppage/otppage.component';
 import { AppbarComponent } from './home/appbar/appbar.component';
 import { MenuComponent } from './home/menu/menu.component';
 import { OrgdetailsComponent } from './home/orgdetails/orgdetails.component';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { OrgdetailsComponent } from './home/orgdetails/orgdetails.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    IonicModule
   ],
   providers: [],
   bootstrap: [AppComponent]
