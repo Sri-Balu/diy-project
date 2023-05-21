@@ -1,0 +1,39 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "no-inline-styles": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter",
+          "-webkit-tap-highlight-color",
+          "-webkit-text-size-adjust",
+          "user-select",
+          "text-align: -webkit-match-parent",
+          "scroll-behavior",
+          "backface-visibility",
+          "-webkit-overflow-scrolling",
+          "text-decoration-skip-ink",
+          "user-select: all",
+          "overflow-anchor"
+        ]
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off",
+        "link-name": "off"
+      }
+    ],
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id-aria": "off"
+      }
+    ]
+  }
+}
