@@ -12,9 +12,13 @@ export class OTPpageComponent {
   retryCountdown: number;
 
   constructor(private router: Router, public localstorageService: LocalstorageService) {
+    if(localStorage.getItem('loggedin') == "true" && localstorageService.isloggedin == true) {
+      this.router.navigate(['/masterhome']);
+    }
     this.showRetryMessage = false;
     this.retryCountdown = 5; // Set the initial countdown time in seconds
     localStorage.setItem('OTP', '123456');
+ 
 
   }
 
@@ -39,6 +43,8 @@ export class OTPpageComponent {
     const enteredotp = (<HTMLInputElement>document.getElementById('inputotp')).value;
     const storedotp = localStorage.getItem('OTP');
     if (enteredotp === storedotp) {
+      this.localstorageService.isloggedin = true;
+      localStorage.setItem('loggedin', "true");
       this.router.navigate(['/masterhome']);
     } else {
       Swal.fire({

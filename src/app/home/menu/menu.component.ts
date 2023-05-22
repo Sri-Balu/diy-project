@@ -8,7 +8,9 @@ import { LocalstorageService } from 'src/app/local/localstorage.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  constructor(public router: Router, public localstorageService: LocalstorageService){}
+
+  constructor(public router: Router, public localstorageService: LocalstorageService){
+  }
 
   navcrud(){
     this.router.navigateByUrl('/crud')
@@ -21,6 +23,15 @@ export class MenuComponent {
   }
   navnotifications(){
     this.router.navigateByUrl('notifications')
+  }
+  logout(){
+    this.localstorageService.isloggedin = false;
+    localStorage.removeItem('loggedin');
+    localStorage.removeItem('PhoneNumber');
+    localStorage.removeItem('OTP');
+    this.router.navigateByUrl('/')
+
+
   }
 
 }
