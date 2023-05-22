@@ -13,7 +13,7 @@ export class LoginpageComponent {
   localStorage: any;
   isChecked: boolean = false;
   constructor(public router: Router, public localstorageService: LocalstorageService) {
-    if (localStorage.getItem('loggedin') == "true" && localstorageService.isloggedin == true) {
+    if (localStorage.getItem('islogged') == "true" && localstorageService.isloggedin == true) {
       this.router.navigateByUrl("/masterhome");
     } else{
       localStorage.setItem('isCheckboxChecked', 'false');

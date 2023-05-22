@@ -9,9 +9,9 @@ import { LocalstorageService } from 'src/app/local/localstorage.service';
 })
 export class MasterhomeComponent {
   constructor(public router: Router, public localstorageService: LocalstorageService){
-    if(localStorage.getItem('loggedin') != "true" || localstorageService.isloggedin != true) {
+    if(localStorage.getItem('islogged') != "true" && localstorageService.isloggedin != true) {
       localstorageService.isloggedin = false;
-      localStorage.setItem('loggedin', "false");
+      localStorage.setItem('islogged', "false");
       this.router.navigateByUrl("/");
     }
 

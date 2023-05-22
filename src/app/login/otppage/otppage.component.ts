@@ -12,7 +12,7 @@ export class OTPpageComponent {
   retryCountdown: number;
 
   constructor(private router: Router, public localstorageService: LocalstorageService) {
-    if(localStorage.getItem('loggedin') == "true" && localstorageService.isloggedin == true) {
+    if(localStorage.getItem('islogged') == "true" && localstorageService.isloggedin == true) {
       this.router.navigate(['/masterhome']);
     }
     this.showRetryMessage = false;
@@ -47,7 +47,7 @@ export class OTPpageComponent {
     const storedotp = localStorage.getItem('OTP');
     if (enteredotp === storedotp) {
       this.localstorageService.isloggedin = true;
-      localStorage.setItem('loggedin', "true");
+      localStorage.setItem('islogged', "true");
       this.router.navigate(['/masterhome']);
     } else {
       Swal.fire({
