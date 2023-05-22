@@ -6,7 +6,8 @@
         <div class="nav-header bg-transparent shadow-none border-0">
             <div class="nav-top w-100">
                 <a href="default.html"><i class="feather-zap text-success display1-size me-2 ms-0"></i><span
-                        class="d-inline-block fredoka-font ls-3 fw-600 text-current font-xxl logo-text mb-0">DIY Utilities
+                        class="d-inline-block fredoka-font ls-3 fw-600 text-current font-xxl logo-text mb-0">DIY
+                        Utilities
                     </span> </a>
                 <a href="#" class="mob-menu ms-auto me-2 chat-active-btn"><i
                         class="feather-message-circle text-grey-900 font-sm btn-round-md bg-greylight"></i></a>
@@ -34,7 +35,7 @@
 
                             <div class="form-group icon-input mb-3">
                                 <i class="font-sm ti-user text-grey-500 pe-0"></i>
-                                <input type="text" class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600"
+                                <input type="text" class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600" id="inputotp"
                                     placeholder="OTP">
                             </div><!-- input field for Name-->
                             <div *ngIf="showRetryMessage">
@@ -46,7 +47,7 @@
                             </div>
                         </form>
                         <div class="col-sm-12 p-0 text-left">
-                            <div class="form-group mb-1"><a href="#"
+                            <div class="form-group mb-1"><a (click)="navdash()"
                                     class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0 ">Login</a>
                             </div>
                         </div>

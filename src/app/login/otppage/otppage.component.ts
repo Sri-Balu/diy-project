@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LocalstorageService } from 'src/app/local/localstorage.service';
 
 @Component({
   selector: 'app-otppage',
@@ -10,9 +11,11 @@ export class OTPpageComponent {
   showRetryMessage: boolean;
   retryCountdown: number;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, public localstorageService: LocalstorageService) {
     this.showRetryMessage = false;
     this.retryCountdown = 5; // Set the initial countdown time in seconds
+    localStorage.setItem('OTP', '123456');
+
   }
 
   handleRetryButtonClick(): void {
@@ -31,5 +34,14 @@ export class OTPpageComponent {
         this.showRetryMessage = false;
       }
     }, 1000); // Update the countdown every second (1000ms)
+  }
+  navdash(){
+    const enteredotp = (<HTMLInputElement>document.getElementById('inputotp')).value;
+    const storedotp = localStorage.getItem('OTP');
+    if (enteredotp === storedotp) {
+      this.router.navigate(['/masterhome']);
+    } else {
+      console.log('incorrect OTP');
+    }
   }
 }
