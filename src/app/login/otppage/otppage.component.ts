@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocalstorageService } from 'src/app/local/localstorage.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-otppage',
   templateUrl: './otppage.component.html',
@@ -41,6 +41,11 @@ export class OTPpageComponent {
     if (enteredotp === storedotp) {
       this.router.navigate(['/masterhome']);
     } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid OTP',
+        text: 'Please enter a valid OTP.',
+      });
       console.log('incorrect OTP');
     }
   }
