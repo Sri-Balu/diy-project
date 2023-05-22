@@ -37,14 +37,15 @@
                                 <i class="font-sm ti-user text-grey-500 pe-0"></i>
                                 <input type="text" class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600" id="inputotp"
                                     placeholder="OTP">
-                            </div><!-- input field for Name-->
-                            <div *ngIf="showRetryMessage">
+                            </div>
+                            <!-- input field for Name-->
+                            <!-- <div *ngIf="showRetryMessage">
                                 <p style="margin-left: 90px;">Didn't receive OTP?</p>
                                 <p style="margin-left: 90px;">Retry in countdown: {{ retryCountdown }}</p>
                                 <button
                                     class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0"
                                     (click)="handleRetryButtonClick()" [disabled]="retryCountdown > 0">Retry</button>
-                            </div>
+                            </div> -->
                         </form>
                         <div class="col-sm-12 p-0 text-left">
                             <div class="form-group mb-1"><a (click)="navdash()"

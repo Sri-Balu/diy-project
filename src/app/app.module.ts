@@ -34,7 +34,7 @@ import { MasterhomeComponent } from './home/masterhome/masterhome.component';
     BrowserModule,
     AppRoutingModule,
     IonicModule,
-    NgCircleProgressModule
+    NgCircleProgressModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
