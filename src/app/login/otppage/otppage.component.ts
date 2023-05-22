@@ -21,6 +21,9 @@ export class OTPpageComponent {
  
 
   }
+  redirectToLoginPage() {
+    this.router.navigate(['/login']);
+  }
 
   handleRetryButtonClick(): void {
     // Trigger the OTP resend functionality
