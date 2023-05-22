@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocalstorageService } from 'src/app/local/localstorage.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-loginpage',
@@ -19,6 +20,7 @@ export class LoginpageComponent {
     if (enteredPhoneNumber === storedPhoneNumber) {
       this.router.navigate(['/otp']);
     } else {
+      Swal.fire('Invalid Phone Number', 'Please check your phone number', 'error');
       console.log('Phone numbers do not match');
     }
   }
