@@ -6,7 +6,7 @@ import { LoginpageComponent } from 'src/app/login/loginpage/loginpage.component'
 import { OTPpageComponent } from './login/otppage/otppage.component';
 import { AppbarComponent } from './home/appbar/appbar.component';
 import { MenuComponent } from './home/menu/menu.component';
-import { OrgdetailsComponent } from './home/orgdetails/orgdetails.component';
+import { OrgdetailsComponent } from './home/menu/orgdetails/orgdetails.component';
 import { IonicModule } from '@ionic/angular';
 import { CRUDComponent } from './home/menu/crud/crud.component';
 import { WalletComponent } from './home/menu/wallet/wallet.component';

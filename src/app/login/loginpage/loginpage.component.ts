@@ -9,7 +9,7 @@ import { LocalstorageService } from 'src/app/local/localstorage.service';
 })
 export class LoginpageComponent {
   constructor(public router: Router, public localstorageService: LocalstorageService){
-    localStorage.setItem('PhoneNumber', '1234567890');
+    localStorage.setItem('PhoneNumber', '+911234567890');
 
 
   }
