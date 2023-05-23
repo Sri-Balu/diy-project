@@ -20,30 +20,31 @@
                     </div>
                     <div class="row ps-2 pe-1">
                         <!-- Justpic -->
-                        <div class="col-md-6 col-sm-6 pe-2 ps-2" (click)="showUnderConstructionAlert('Justpic')">
+                        <div class="col-md-6 col-sm-6 pe-2 ps-2" *ngFor="let details of detailsArray" (click)="showUnderConstructionAlert(details.name)">
                             <div class="card d-block border-0 shadow-xss rounded-3 overflow-hidden mb-3">
-                                <div class="card-body position-relative h100 bg-image-cover bg-image-center"
-                                    style="background-image: url(https://media.licdn.com/dms/image/D563DAQHncoP6yxHUeA/image-scale_191_1128/0/1675639521393?e=1685278800&amp;v=beta&amp;t=XC8n00Zf3bUPjf6jM42Bnv6DaHBYQFWPrgsQOTYMgPk);">
-                                </div>
-                                <div class="card-body d-block w-100 pl-10 pe-4 pb-4 pt-0 text-left position-relative">
-                                    <figure class="avatar position-absolute w75 z-index-1"
-                                        style="top:-40px; left: 15px;"><img
-                                            src="https://th.bing.com/th/id/OIP.KRMc176rFJiUyFSQDzye-wHaHa?w=173&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-                                            alt="image" class="float-right p-1 bg-white rounded-circle w-100"></figure>
-                                    <div class="clearfix"></div>
-                                    <h4 class="fw-700 font-xsss mt-3 mb-1">Justpic</h4>
-                                    <p class="fw-500 font-xsssss text-grey-500 mt-0 mb-3">justpic@justpic.in</p>
-                                    <span class="position-absolute right-15 top-0 d-flex align-items-center">
-                                        <a href="#" class="d-lg-block d-none"><i
-                                                class="feather-video btn-round-md font-md bg-primary-gradiant text-white"></i></a>
-                                        <a href="#"
-                                            class="text-center p-2 lh-24 w100 ms-1 ls-3 d-inline-block rounded-xl bg-current font-xsssss fw-700 ls-lg text-white">FOLLOW</a>
-                                    </span>
-                                </div>
+                              <div class="card-body position-relative h100 bg-image-cover bg-image-center" [style.background-image]="'url(' + details.url + ')'"></div>
+                              <div class="card-body d-block w-100 pl-10 pe-4 pb-4 pt-0 text-left position-relative">
+                                <figure class="avatar position-absolute w75 z-index-1" style="top:-40px; left: 15px;">
+                                  <img [src]="details.url" alt="image" class="float-right p-1 bg-white rounded-circle w-100">
+                                </figure>
+                                <div class="clearfix"></div>
+                                <h4 class="fw-700 font-xsss mt-3 mb-1">{{ details.name }}</h4>
+                                <p class="fw-500 font-xsssss text-grey-500 mt-0 mb-3">{{ details.email }}</p>
+                                <span class="position-absolute right-15 top-0 d-flex align-items-center">
+                                  <a href="#" class="d-lg-block d-none">
+                                    <i class="feather-video btn-round-md font-md bg-primary-gradiant text-white"></i>
+                                  </a>
+                                  <a href="#"
+                                    class="text-center p-2 lh-24 w100 ms-1 ls-3 d-inline-block rounded-xl bg-current font-xsssss fw-700 ls-lg text-white">
+                                    FOLLOW
+                                  </a>
+                                </span>
+                              </div>
                             </div>
-                        </div>
+                          </div>
+                          
                         <!-- lokveeraj -->
-                        <div class="col-md-6 col-sm-6 pe-2 ps-2" (click)="showUnderConstructionAlert('Lokveeraj')">
+                        <!-- <div class="col-md-6 col-sm-6 pe-2 ps-2" (click)="showUnderConstructionAlert('Lokveeraj')">
                             <div class="card d-block border-0 shadow-xss rounded-3 overflow-hidden mb-3">
                                 <div class="card-body position-relative h100 bg-image-cover bg-image-center"
                                     style="background-image: url(https://media.licdn.com/dms/image/D563DAQGSFBq9qS5r4A/image-scale_191_1128/0/1661427693395?e=1685282400&amp;v=beta&amp;t=IlUWcRLlu5KAcS8BMQ8qQXUUt4Cg-9uHkmTnvtwlS2g);">
@@ -64,9 +65,9 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- linked in -->
-                        <div class="col-md-6 col-sm-6 pe-2 ps-2" (click)="showUnderConstructionAlert('LinkesIn')">
+                        <!-- <div class="col-md-6 col-sm-6 pe-2 ps-2" (click)="showUnderConstructionAlert('LinkesIn')">
                             <div class="card d-block border-0 shadow-xss rounded-3 overflow-hidden mb-3">
                                 <div class="card-body position-relative h100 bg-image-cover bg-image-center"
                                     style="background-image: url(https://th.bing.com/th/id/OIP.aEAAMSGCw8_XwE08O94dMwHaB0?w=349&h=85&c=7&r=0&o=5&dpr=1.3&pid=1.7);">
@@ -87,9 +88,9 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- instagram -->
-                        <div class="col-md-6 col-sm-6 pe-2 ps-2" (click)="showUnderConstructionAlert('Instagram')">
+                        <!-- <div class="col-md-6 col-sm-6 pe-2 ps-2" (click)="showUnderConstructionAlert('Instagram')">
                             <div class="card d-block border-0 shadow-xss rounded-3 overflow-hidden mb-3">
                                 <div class="card-body position-relative h100 bg-image-cover bg-image-center"
                                     style="background-image: url(https://th.bing.com/th/id/OIP.Y-BZlQt8v-STriMiBLRLEwHaEK?w=319&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);">
@@ -110,9 +111,9 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- github -->
-                        <div class="col-md-6 col-sm-6 pe-2 ps-2" (click)="showUnderConstructionAlert('Github')">
+                        <!-- <div class="col-md-6 col-sm-6 pe-2 ps-2" (click)="showUnderConstructionAlert('Github')">
                             <div class="card d-block border-0 shadow-xss rounded-3 overflow-hidden mb-3">
                                 <div class="card-body position-relative h100 bg-image-cover bg-image-center"
                                     style="background-image: url(data:image/jpeg;base64,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);">
@@ -133,9 +134,9 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- gmail -->
-                        <div class="col-md-6 col-sm-6 pe-2 ps-2" (click)="showUnderConstructionAlert('GMail')">
+                        <!-- <div class="col-md-6 col-sm-6 pe-2 ps-2" (click)="showUnderConstructionAlert('GMail')">
                             <div class="card d-block border-0 shadow-xss rounded-3 overflow-hidden mb-3">
                                 <div class="card-body position-relative h100 bg-image-cover bg-image-center"
                                     style="background-image: url(https://th.bing.com/th/id/OIP.V_S7bymdyDOWNK24jcaZjQHaEK?w=297&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7);"></div>
@@ -155,7 +156,7 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
