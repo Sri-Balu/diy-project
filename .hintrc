@@ -59,6 +59,13 @@
       {
         "aria-allowed-attr": "off"
       }
+    ],
+    "highest-available-document-mode": "off",
+    "axe/language": [
+      "default",
+      {
+        "html-has-lang": "off"
+      }
     ]
   }
 }

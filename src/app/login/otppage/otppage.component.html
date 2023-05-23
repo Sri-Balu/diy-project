@@ -52,8 +52,49 @@
                             </div>
                         </form>
                         <div class="col-sm-12 p-0 text-left">
+<<<<<<< HEAD
                             <div class="form-group mb-1"><a (click)="navdash()"
                                     class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0 ">Submit</a>
+=======
+                            <div class="form-group mb-1"><a href="#"
+                                    class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0 ">Verify OTP</a>
+                                    
+                                    <html>
+                                    <head>
+                                      <title>Resend OTP Link</title>
+                                      <style>
+                                        .container {
+                                          margin: 20px;
+                                          text-align: right;
+                                          cursor: pointer;
+                                          font-size: 14px;
+                                        }
+                                        #timer {
+                                          display: inline-block;
+                                          margin-left: 5px;
+                                        }
+                                      </style>
+                                    </head>
+                                    <body>
+                                      <div class="container" onclick="resendOTP()">
+                                        <h2 style="font-size: 14px; margin: 0;">Resend OTP</h2>
+                                        <span id="timer">Retry in 00 seconds</span>
+                                      </div>
+                                    
+                                      <script>
+                                        function resendOTP() {
+                                          // Add your code here to handle the resend OTP functionality
+                                          // This can include sending a new OTP to the user's email or phone number
+                                          // You can use AJAX or fetch API to make a request to the server
+                                    
+                                          // Example alert to indicate the OTP has been resent
+                                          alert("OTP has been resent!");
+                                        }
+                                      </script>
+                                    </body>
+                                    </html>
+                                    
+>>>>>>> b5c69b06be9ffafce24ac8f0b39e3f70fafaa69a
                             </div>
                         </div>
                         <div class="form-check text-left mb-3">

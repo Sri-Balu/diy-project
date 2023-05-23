@@ -10,8 +10,8 @@ import { OrgdetailsComponent } from './home/menu/orgdetails/orgdetails.component
 import { IonicModule } from '@ionic/angular';
 import { CRUDComponent } from './home/menu/crud/crud.component';
 import { WalletComponent } from './home/menu/wallet/wallet.component';
-import { NotificationsComponent } from './home/menu/notifications/notifications.component';
 import { LoadingComponent } from './loading/loading.component';
+import { NotificationsComponent } from './home/menu/notifications/notifications.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { MasterhomeComponent } from './home/masterhome/masterhome.component';
 import { FormsModule } from '@angular/forms';
@@ -29,15 +29,15 @@ import Swal from 'sweetalert2';
     CRUDComponent,
     WalletComponent,
     NotificationsComponent,
-    LoadingComponent,
     MasterhomeComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IonicModule,
-    NgCircleProgressModule,
-    FormsModule
+    FormsModule,
+    NgCircleProgressModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
