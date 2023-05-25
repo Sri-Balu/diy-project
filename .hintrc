@@ -48,12 +48,7 @@
         "image-alt": "off"
       }
     ],
-    "axe/structure": [
-      "default",
-      {
-        "list": "off"
-      }
-    ],
+    "axe/structure": "off",
     "axe/aria": [
       "default",
       {

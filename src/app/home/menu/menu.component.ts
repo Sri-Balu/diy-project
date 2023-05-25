@@ -9,29 +9,23 @@ import { LocalstorageService } from 'src/app/local/localstorage.service';
 })
 export class MenuComponent {
 
-  constructor(public router: Router, public localstorageService: LocalstorageService){
+  constructor(public router: Router, public localstorageService: LocalstorageService) {
   }
 
-  navcrud(){
+  navcrud() {
     this.router.navigateByUrl('/crud')
   }
-  navdashboard(){
+  navdashboard() {
     this.router.navigateByUrl('dashboard')
   }
-  navwallet(){
+  navwallet() {
     this.router.navigateByUrl('wallet')
   }
-  navnotifications(){
+  navnotifications() {
     this.router.navigateByUrl('notifications')
   }
-  logout(){
-    this.localstorageService.isloggedin = false;
-    localStorage.removeItem('loggedin');
-    localStorage.removeItem('PhoneNumber');
-    localStorage.removeItem('OTP');
-    this.router.navigateByUrl('/')
 
-
-  }
 
 }
+
+

@@ -1,9 +1,5 @@
-
 <div class="color-theme-blue">
-
-
     <div class="main-wrap">
-
         <div class="nav-header bg-transparent shadow-none border-0">
             <div class="nav-top w-100">
                 <a href="default.html"><i class="feather-zap text-success display1-size me-2 ms-0"></i><span
@@ -28,22 +24,25 @@
                     <div class="card-body rounded-0 text-left">
                         <h2 class="fw-700 display1-size display2-md-size mb-4">Login into <br>your account</h2>
                         <form>
-
                             <div class="form-group icon-input mb-3">
                                 <i class="font-sm ti-user text-grey-500 pe-0"></i>
-                                <input type="text" class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600" id="phoneNumber"  placeholder="Phone number" ngModel required>
+                                <input type="text" class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600"
+                                    id="phoneNumber" [maxLength]="13" placeholder="Phone number" ngModel required>
                             </div>
                             <div class="form-check text-left mb-3" (click)="checkBox()">
-
-                                <input *ngIf="isChecked" type="checkbox" class="form-check-input mt-2" id="exampleCheck1" checked>
-                                <input *ngIf="!isChecked" type="checkbox"  class="form-check-input mt-2" id="exampleCheck1">
-
-                                <label class="form-check-label font-xsss text-grey-500" for="exampleCheck1"><a href="https://www.justpic.in/termsandconditions">Accept Term and Conditions</a></label>
+                                <input *ngIf="isChecked" type="checkbox" class="form-check-input mt-2"
+                                    id="exampleCheck1" checked>
+                                <input *ngIf="!isChecked" type="checkbox" class="form-check-input mt-2"
+                                    id="exampleCheck1">
+                                <label class="form-check-label font-xsss text-grey-500" for="exampleCheck1"><a
+                                        href="https://www.justpic.in/termsandconditions">Accept Term and
+                                        Conditions</a></label>
                             </div>
                         </form>
                         <div class="col-sm-12 p-0 text-left">
-                            <div class="form-group mb-1" ><a (click)="navotp()"
-                                    class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0 " [class.disabled]="!this.localStorage.isCheckboxChecked">Login</a>
+                            <div class="form-group mb-1"><a (click)="navotp()"
+                                    class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0 "
+                                    [class.disabled]="!this.localStorage.isCheckboxChecked">Login</a>
                             </div>
                         </div>
                     </div>
