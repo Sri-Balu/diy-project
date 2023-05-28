@@ -16,6 +16,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { MasterhomeComponent } from './home/masterhome/masterhome.component';
 import { FormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -30,14 +31,15 @@ import Swal from 'sweetalert2';
     WalletComponent,
     NotificationsComponent,
     MasterhomeComponent,
-    LoadingComponent
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IonicModule,
     FormsModule,
-    NgCircleProgressModule, 
+    NgCircleProgressModule,
+    BrowserAnimationsModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
