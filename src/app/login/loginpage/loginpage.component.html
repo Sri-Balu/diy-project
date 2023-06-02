@@ -27,7 +27,7 @@
                             <div class="form-group icon-input mb-3">
                                 <i class="font-sm ti-user text-grey-500 pe-0"></i>
                                 <input type="text" class="style2-input ps-5 form-control text-grey-900 font-xsss fw-600"
-                                    id="phoneNumber" [maxLength]="13" placeholder="Phone number" ngModel required>
+                                    id="phoneNumber" [maxLength]="13" placeholder="Phone number">
                             </div>
                             <div class="form-check text-left mb-3" (click)="checkBox()">
                                 <input *ngIf="isChecked" type="checkbox" class="form-check-input mt-2"
@@ -42,7 +42,7 @@
                         <div class="col-sm-12 p-0 text-left">
                             <div class="form-group mb-1"><a (click)="navotp()"
                                     class="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0 "
-                                    [class.disabled]="!this.localStorage.isCheckboxChecked">Login</a>
+                                    [class.disabled]="!isCheckboxChecked">Login</a>
                             </div>
                         </div>
                     </div>

@@ -10,7 +10,7 @@ import { WalletComponent } from './home/menu/wallet/wallet.component';
 import { NotificationsComponent } from './home/menu/notifications/notifications.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/', pathMatch: 'full'},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: '', component: LoadingComponent},
   {path: 'login', component: LoginpageComponent},
   {path: 'otp', component: OTPpageComponent},
